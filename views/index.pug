@@ -1,0 +1,17 @@
+doctype html
+html
+	head
+		link(rel='stylesheet', href='style.css')
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto')
+	body.indexbody
+		div.indexcontainer
+			form(action='/button', method='post' autocomplete='off')
+				//- label(for='fname') Your Name
+				//- input.name(type='text', name='name', placeholder='Your name...')
+				label(for='title') Title of your message
+				input.title(type='text', name='title' placeholder='Title...')
+				label(for='subject') Your message
+				textarea.message(name='body', placeholder='Write here your message...', style='height:200px')
+				input.button(type='submit', value='Send the message')
+		div.messageLink
+			a(href='/messages') Go to see the messages

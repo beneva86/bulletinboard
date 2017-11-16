@@ -1,0 +1,18 @@
+doctype html
+html
+	head
+		script(src="query_db.js")
+		link(rel='stylesheet', href='style.css')
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto')
+	body.messagebody
+		div.messageheader
+			h1 Messages
+		each message in messages
+			div.messagecontainer
+				p Title: #{message.title} 
+				p Message: #{message.body}
+				p Time: #{message.time}
+				br
+		p
+			a(href='/') If you'd like to send a message to me, click here
+
